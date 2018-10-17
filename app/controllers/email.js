@@ -8,7 +8,12 @@ export default Controller.extend({
       );
 
       if (confirmed) {
-        email.destroyRecord();
+        let afterdestroy = email.destroyRecord();
+
+        afterdestroy.then(() => {
+          this.transitionToRoute('index');
+        });
+
 
       }
     }
