@@ -1,0 +1,21 @@
+{{#link-to "create"}}
+<button type="button" style="width: 150px;
+  background-color: #D64039;
+  font-size: 20px;
+  font-family: Arial;
+  color: white; border-radius: 5px; padding: 5px; margin: 10px; ">
+  Compose</button>
+{{/link-to}}
+
+<nav style="margin: 20px; font-size: 18px;   font-family: Arial; width: 200px;">
+  {{#link-to "index"}}
+  Inbox |
+  {{/link-to}}
+  {{#link-to "sent"}}
+  Sent |
+  {{/link-to}}
+  {{#link-to "trash"}}
+  Trash
+  {{/link-to}}
+</nav>
+{{outlet}}

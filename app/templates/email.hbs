@@ -1,0 +1,22 @@
+<nav style="margin: 20px; font-family: Arial;">
+  {{#link-to "index"}}
+  Back
+  {{/link-to}}
+</nav>
+<br>
+
+<button type="button" style="border-radius: 5px; padding: 2px; margin: 10px;"
+onclick={{action "deleteEmail" model}}>
+<img style="width: 25px;" src="/images/trash.png">
+</button>
+
+<div style="width:90%; margin-left: auto; margin-right:auto;
+border: grey solid 1px; border-radius: 5px; margin: 20px; padding: 10px; font-family: Arial;">
+
+<h1>Subject: {{model.subject}}</h1>
+<p>id: {{model.id}}</p>
+<p>From: {{model.from}}</p>
+<p>To: {{model.to}}</p>
+<p>Message: {{model.message}}</p>
+
+</div>
