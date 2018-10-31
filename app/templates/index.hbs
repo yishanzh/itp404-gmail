@@ -1,18 +1,27 @@
 <div style="width:90%; margin-left: auto; margin-right:auto;
 border: grey solid 1px; border-radius: 5px; margin: 20px; padding: 10px;font-family: Arial;">
   <p style="text-align: center;">INBOX</p>
+
+  <div class="starred">
+  <h3>Starred</h3>
+  {{#each model as |email| }}
+   {{#if email.starred}}
+   <hr>
+   <DisplayStarred @email={{email}}/>
+   {{/if}}
+   {{/each}}
+  </div>
+
+<div class="unstarred">
+<h3>Unstarred</h3>
+
   {{#each model as |email|}}
-    <hr>
-
-    {{#link-to "email" email.id}}
-    From {{email.from}}
-        {{/link-to}}
-    <p style="width: 100%; white-space: nowrap; overflow: hidden;
-    text-overflow: ellipsis; padding:10px; color: grey; font-family: Arial;">{{email.message}}</p>
-
-
-
+  {{#unless email.starred}}
+  <hr>
+  <DisplayStarred @email={{email}}/>
+  {{/unless}}
  {{/each}}
+ </div>
 </div>
 
 
