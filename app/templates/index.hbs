@@ -1,27 +1,24 @@
-<div style="width:90%; margin-left: auto; margin-right:auto;
-border: grey solid 1px; border-radius: 5px; margin: 20px; padding: 10px;font-family: Arial;">
-  <p style="text-align: center;">INBOX</p>
-
+<div class="indexstyle">
+  <p class="textcenter">INBOX</p>
   <div class="starred">
-  <h3>Starred</h3>
-  {{#each model as |email| }}
-   {{#if email.starred}}
-   <hr>
-   <DisplayStarred data-test="starred-email" @email={{email}}/>
-   {{/if}}
-   {{/each}}
+    <h3>Starred</h3>
+    {{#each model as |email| }}
+      {{#if email.starred}}
+        <hr>
+        <DisplayStarred data-test="starred-email" @email={{email}}/>
+      {{/if}}
+    {{/each}}
   </div>
 
-<div class="unstarred">
-<h3>Unstarred</h3>
-
-  {{#each model as |email|}}
-  {{#unless email.starred}}
-  <hr>
-  <DisplayStarred data-test="unstarred-email" @email={{email}}/>
-  {{/unless}}
- {{/each}}
- </div>
+  <div class="unstarred">
+    <h3>Unstarred</h3>
+    {{#each model as |email|}}
+      {{#unless email.starred}}
+        <hr>
+        <DisplayStarred data-test="unstarred-email" @email={{email}}/>
+      {{/unless}}
+    {{/each}}
+  </div>
 </div>
 
 

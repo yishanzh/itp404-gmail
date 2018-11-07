@@ -1,34 +1,33 @@
-<nav style="margin: 20px; font-family: Arial;">
+<nav class="margin20">
   {{#link-to "index"}}
-  Back
+    Back
   {{/link-to}}
 </nav>
 <br>
 
-<div style="width:90%; margin-left: auto; margin-right:auto;
-border: grey solid 1px; border-radius: 5px; margin: 20px; padding: 10px; font-family: Arial;">
-<form onsubmit={{action "createEmail"}}>
-<div style="margin: 20px;">
-  <label for="subject">Subject: </label>
-{{input type="text" id="subject" value=subject}}
-</div>
+<div id="create">
+  <form onsubmit={{action "createEmail"}}>
+    <div class="margin20">
+      <label for="subject">Subject: </label>
+      {{input type="text" id="subject" value=subject}}
+    </div>
 
-<div style="margin: 20px;">
-  <label for="from">From: </label>
-  {{input type="text" id="from" value=from}}
-</div>
+    <div class="margin20">
+      <label for="from">From: </label>
+      {{input type="text" id="from" value=from}}
+    </div>
 
-<div style="margin: 20px;">
-  <label for="to">To: </label>
-  {{input type="text" id="to" value=to}}
-</div>
+    <div class="margin20">
+      <label for="to">To: </label>
+      {{input type="text" id="to" value=to}}
+    </div>
 
-  <div style="margin: 20px;">
-    <label for="message">Message</label>
-    {{textarea id="msg" rows="8" cols="80" value=message}}
-  </div>
+    <div class="margin20">
+      <label for="message">Message</label>
+      {{textarea id="msg" rows="8" cols="80" value=message}}
+    </div>
 
-  <button data-test="submit" style="margin: 20px;" type="submit">Confirm</button>
+    <button data-test="submit" class="margin20" type="submit">Confirm</button>
 
-</form>
+  </form>
 </div>

@@ -1,22 +1,24 @@
-<nav style="margin: 20px; font-family: Arial;">
+<nav class="margin20">
   {{#link-to "index"}}
-  Back
+    Back
   {{/link-to}}
 </nav>
 <br>
 
-<button data-test="delete-email" type="button" style="border-radius: 5px; padding: 2px; margin: 10px;"
-onclick={{action "deleteEmail" model}}>
-<img style="width: 25px;" src="/images/trash.png">
+<button
+  data-test="delete-email"
+  type="button"
+  class="deletebutton"
+  onclick={{action "deleteEmail" model}}
+> <img id="trashicon" alt=""src="/images/trash.png">
 </button>
 
-<div style="width:90%; margin-left: auto; margin-right:auto;
-border: grey solid 1px; border-radius: 5px; margin: 20px; padding: 10px; font-family: Arial;">
+<div class="emailframe">
 
-<h1 data-test="subject">Subject: {{model.subject}}</h1>
-<p>id: {{model.id}}</p>
-<p data-test="from">From: {{model.from}}</p>
-<p data-test="to">To: {{model.to}}</p>
-<p data-test="msg">Message: {{model.message}}</p>
+  <h1 data-test="subject">Subject: {{model.subject}}</h1>
+  <p>id: {{model.id}}</p>
+  <p data-test="from">From: {{model.from}}</p>
+  <p data-test="to">To: {{model.to}}</p>
+  <p data-test="msg">Message: {{model.message}}</p>
 
 </div>

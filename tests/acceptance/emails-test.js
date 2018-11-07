@@ -2,7 +2,7 @@ import { module, test } from 'qunit';
 import { visit, currentURL, click, fillIn } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
-import window, { reset } from 'ember-window-mock';
+import window from 'ember-window-mock';
 
 
 module('Acceptance | emails', function(hooks) {
@@ -45,7 +45,7 @@ module('Acceptance | emails', function(hooks) {
 
 
 
-  test('deleting a post', async function(assert) {
+  test('deleting an email', async function(assert) {
     server.createList('email', 2);
     window.confirm = () => true; //assuming it is true so we can verify other things
 
