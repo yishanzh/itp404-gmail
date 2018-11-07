@@ -25,10 +25,10 @@ border: grey solid 1px; border-radius: 5px; margin: 20px; padding: 10px; font-fa
 
   <div style="margin: 20px;">
     <label for="message">Message</label>
-    {{textarea rows="8" cols="80" value=message}}
+    {{textarea id="msg" rows="8" cols="80" value=message}}
   </div>
 
-  <button style="margin: 20px;" type="submit">Confirm</button>
+  <button data-test="submit" style="margin: 20px;" type="submit">Confirm</button>
 
 </form>
 </div>

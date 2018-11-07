@@ -6,7 +6,12 @@ export function truncateText(params /*, hash*/) {
 // console.log(params[0]);
 let text = params[0];
 let threedots = "...";
-return text.substring(0,148) + threedots ;
+
+if (text.length > 148) {
+  return text.substring(0,148) + threedots ;
+}
+
+return text;
 
 
   // const [ value ] = params;
